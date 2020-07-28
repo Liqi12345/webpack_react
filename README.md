@@ -1,6 +1,6 @@
 npm init -y （生成package.json）
 
-安装webpack和 webpack-cli
+**安装webpack和 webpack-cli**
 
 `npm i  webpack  webpack-cli`		
 
@@ -8,11 +8,11 @@ npm init -y （生成package.json）
 
 ------
 
-安装	webpack-dev-server
+**安装	webpack-dev-server**
 
 `npm i webpack-dev-server`		
 
-在package.json配置启动命令	,运行 npm run serve ，这时候浏览器将随着代码的改动而自动更新
+**在package.json配置启动命令	,运行 npm run serve ，这时候浏览器将随着代码的改动而自动更新**
 
 `“serve”:npx webpack-dev-server --mode development --output-public-path dist`
 
@@ -123,11 +123,11 @@ module.exports = {
 };
 ```
 
-babel解析会报错，安装	@babel/plugin-transform-runtime
+**babel解析会报错，安装	@babel/plugin-transform-runtime**
 
 `npm i @babel/plugin-transform-runtime`
 
-新建.babelrc，配置
+**新建.babelrc，配置**
 
 ```js
 {"plugins": [
@@ -135,11 +135,11 @@ babel解析会报错，安装	@babel/plugin-transform-runtime
  ]}
 ```
 
-安装react路由
+**安装react路由**
 
 `npm i react-router-dom`
 
-配置路由
+**配置路由**
 
 ```js
 
@@ -160,7 +160,7 @@ export const routeList = [
 ]
 ```
 
-app.js 引入路由
+**app.js 引入路由**
 
 ```jsx
 import React,{Component} from 'react'
@@ -220,7 +220,7 @@ export default currentRoute
 
 ```
 
-安装axios qs (调用接口)
+**安装axios qs (调用接口)**
 
 `npm i axios qs`
 
@@ -232,10 +232,10 @@ webpack  命令打包
 
 ![1595391106305](C:\Users\myf\AppData\Roaming\Typora\typora-user-images\1595391106305.png)
 
-总结：
+**总结：**
 
 ​	我是最近才开始学习react，正好公司经常有一些小型的活动项目需要开发，觉得每次用脚手架有点庞大，所以自己就学着搭建了。不过还有很多不足，所以这个只适用于微小型项目，一些小的活动开发，便于自己熟悉react。
 
-不足：
+**不足：**
 
 ​	很多地方还不完善，比如打包的时候开发环境和生产环境我目前不是很清楚区别，打包的文件过大如何分包，还有css目录的问题，很多有不足，这只是迈出了第一步，搭建这个主要是方便自己学习react进行开发，日后会再学习改进。
