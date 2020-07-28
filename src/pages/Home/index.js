@@ -1,9 +1,14 @@
 import React from 'react'
 import Back from '../../components/back'
 import appCss from './index.css'
+import {getMyPrize} from '../../api/index'
 
 const Home = (props) =>{
 	console.log(props)
+	const showPrize = () =>{
+		const res = getMyPrize()
+		console.log(res)
+	}
 	return(
 		<div>
 			<Back routeList={props} />
@@ -12,7 +17,7 @@ const Home = (props) =>{
 				<div className={appCss.btn}>
 					<div className={appCss.detail}></div>
 					<div className={appCss.join}></div>
-					<div className={appCss.my_prize}></div>
+					<div onClick= {showPrize} className={appCss.my_prize}></div>
 				</div>
 			</div>
 		</div>

@@ -11,10 +11,11 @@ export function findDeviceQRCode(data,method='get'){
 	})
 }
 
-export function getMyPrize(data = {},method='get'){
+export function getMyPrize(data = {},method='get'){ //我的奖品
 	return request({
 		url:'https://mp.youxi3.cn/act/tel_integ/202006/tel_nethall/prize/myPrize.jsp',
 		params:data,
 		method
 	})
 }
+

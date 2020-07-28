@@ -1,8 +1,7 @@
 import React from 'react'
 import { Route, Redirect } from 'react-router-dom'
-
   
-const a = (props)=>{
+const Current = (props)=>{
 	console.log(props)
 	const { pathname } = props.location;
 	const findex = props.routeList.findIndex(item =>item.path == pathname)
@@ -26,4 +25,4 @@ const a = (props)=>{
       );
 }
 
-export default a
+export default Current

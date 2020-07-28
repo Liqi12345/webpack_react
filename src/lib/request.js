@@ -1,12 +1,22 @@
-
+import React from 'react'
 import axios from 'axios';
 import Qs from 'qs'
-import { Toast } from 'antd-mobile';
+import Load from '../components/load';
 function showLoading() {
-  Toast.loading('加载中', 0);
+	Load.open({
+		alertTip:'加载中...',
+		closeAlert:function(){
+            console.log("加载中...");
+        }
+		
+	})
 }
 function hideLoading() {
-  Toast.hide();
+	Load.close({
+		closeAlert:function(){
+            console.log("关闭了...");
+       }
+	})
 }
 
 const service = axios.create({
@@ -34,11 +44,11 @@ service.interceptors.response.use(
     const res = response.data;
     if (res.hasOwnProperty('status') && res.status !== 200) {
       console.log(999)
-      Toast.fail(res.msg, 1);
+//    Toast.fail(res.msg, 1);
       return Promise.reject(res.msg)
     }
     if (res.hasOwnProperty('errno') && res.errno !== 0) {
-      Toast.fail(res.errmsg, 1);
+//    Toast.fail(res.errmsg, 1);
       return Promise.reject(res.errmsg)
     }
     return res;
@@ -46,7 +56,7 @@ service.interceptors.response.use(
   error => {
     hideLoading();
     console.log('err' + error);
-    Toast.fail('请求错误，刷新重试', 1);
+//  Toast.fail('请求错误，刷新重试', 1);
     return Promise.reject(error);
   }
 );
